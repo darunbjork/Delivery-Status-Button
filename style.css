@@ -65,6 +65,7 @@ h1, h2 {
   flex-wrap: wrap;
 }
 
+/* Card styling (continued) */
 .card {
   width: 250px;
   border: 1px solid #d2691e;
@@ -73,6 +74,9 @@ h1, h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
@@ -91,13 +95,30 @@ h1, h2 {
 }
 
 .card p {
-  padding: 0 10px 10px;
+  padding: 0 10px;
   color: #555;
 }
 
-/* Order button section */
-.order-section {
-  padding: 30px;
+/* Order button inside each card */
+.order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4500;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px;
+}
+
+.order-button:hover {
+  background-color: #d2691e;
 }
 
 /* Button styling */
@@ -241,4 +262,33 @@ h1, h2 {
 
 .footer__cookies button:hover {
   background-color: #ccc;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(133deg, #8b4513 #e67e23);
+  color: #833333;
+  padding: 15px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  transition: background 0.3, transform 0.3, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-to-top:hover {
+  background: linear-gradient(135deg, #e67e22, #e74c3c);
+  transform: translateY(-0px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3s);
+}
+
+#scroll-to-top::before {
+  content: '\25B2';
+  font-size: 20px;
 }

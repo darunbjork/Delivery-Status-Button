@@ -32,28 +32,34 @@
                 <img src="Pizza/margherita.png" alt="Margherita Pizza">
                 <h3>Margherita</h3>
                 <p>A classic pizza with tomato, mozzarella, and fresh basil.</p>
+                <div class="order-button" id="orderButtonMargherita" onclick="handleOrder('Margherita')">
+                    <span id="iconMargherita">🍕</span>
+                    <span id="textMargherita">Order Now</span>
+                </div>
+                <p class="order-note" id="orderNoteMargherita">Your delicious pizza is just a click away!</p>
             </div>
             <div class="card">
                 <img src="Pizza/Pepperoni.png" alt="Pepperoni Pizza">
                 <h3>Pepperoni</h3>
                 <p>Loaded with pepperoni and mozzarella cheese.</p>
+                <div class="order-button" id="orderButtonPepperoni" onclick="handleOrder('Pepperoni')">
+                    <span id="iconPepperoni">🍕</span>
+                    <span id="textPepperoni">Order Now</span>
+                </div>
+                <p class="order-note" id="orderNotePepperoni">Your delicious pizza is just a click away!</p>
             </div>
             <div class="card">
                 <img src="Pizza/Veggie.png" alt="Veggie Pizza">
                 <h3>Veggie Delight</h3>
                 <p>A healthy choice with bell peppers, olives, and mushrooms.</p>
+                <div class="order-button" id="orderButtonVeggie" onclick="handleOrder('Veggie')">
+                    <span id="iconVeggie">🍕</span>
+                    <span id="textVeggie">Order Now</span>
+                </div>
+                <p class="order-note" id="orderNoteVeggie">Your delicious pizza is just a click away!</p>
             </div>
         </div>
     </section>
-
-    <!-- Order Button -->
-    <div class="order-section">
-        <div class="demo" id="orderButton" onclick="handleOrder()">
-            <div class="demo__icon" id="icon">🍕</div>
-            <div class="demo__text" id="text">Order Pizza</div>
-        </div>
-        <p class="order-note" id="orderNote">Your delicious pizza is just a click away!</p>
-    </div>
 
     <!-- Footer Section -->
 <footer class="footer">
@@ -77,7 +83,7 @@
         <div class="footer__column">
             <h3>Customer Service</h3>
             <ul>
-                <li><a href="#nutrition">Nutrition & Allergens</a></li>
+                <li><a href="#nutrition">Nutrition &amp; Allergens</a></li>
                 <li><a href="#feedback">Give Us Feedback</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -105,8 +111,7 @@
         </div>
     </div>
 </footer>
-
-
+<button id="scroll-to-top">Top</button>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,21 +1,25 @@
-let orderStage = 0;
+let orderStages = {
+    Margherita: 0,
+    Pepperoni: 0,
+    Veggie: 0
+};
 
-function handleOrder() {
-    const button = document.getElementById('orderButton');
-    const icon = document.getElementById('icon');
-    const text = document.getElementById('text');
-    const orderNote = document.getElementById('orderNote');
+function handleOrder(pizzaType) {
+    const button = document.getElementById(`orderButton${pizzaType}`);
+    const icon = document.getElementById(`icon${pizzaType}`);
+    const text = document.getElementById(`text${pizzaType}`);
+    const orderNote = document.getElementById(`orderNote${pizzaType}`);
 
     // Change the button's state based on the current stage
-    switch (orderStage) {
+    switch (orderStages[pizzaType]) {
         case 0:
             // Stage 1: Processing
             button.classList.add('processing');
             icon.textContent = '⏳';
             text.textContent = 'Preparing your pizza...';
             orderNote.textContent = "Our chef is hard at work!";
-            orderStage++;
-            setTimeout(handleOrder, 2000); // Move to the next stage after 2 seconds
+            orderStages[pizzaType]++;
+            setTimeout(() => handleOrder(pizzaType), 2000); // Move to the next stage after 2 seconds
             break;
         
         case 1:
@@ -25,8 +29,8 @@ function handleOrder() {
             icon.textContent = '🚗';
             text.innerHTML = 'On the way<span class="demo__text--dots">...</span>';
             orderNote.textContent = "Your pizza is being delivered!";
-            orderStage++;
-            setTimeout(handleOrder, 3000); // Move to the next stage after 3 seconds
+            orderStages[pizzaType]++;
+            setTimeout(() => handleOrder(pizzaType), 3000); // Move to the next stage after 3 seconds
             break;
         
         case 2:
@@ -34,16 +38,17 @@ function handleOrder() {
             icon.textContent = '🍽️';
             text.textContent = "Enjoy your pizza!";
             orderNote.textContent = "Thanks for ordering with Pizza Palace!";
-            orderStage++;
+            orderStages[pizzaType]++;
             break;
         
         default:
             // Reset to the initial stage
             button.classList.remove('delivering');
             icon.textContent = '🍕';
-            text.textContent = 'Order Pizza';
+            text.textContent = 'Order Now';
             orderNote.textContent = "Your delicious pizza is just a click away!";
-            orderStage = 0;
+            orderStages[pizzaType] = 0;
             break;
     }
 }
+
