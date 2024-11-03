@@ -3,14 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Button</title>
+    <title>Pizza Palace</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="demo" id="orderButton" onclick="handleOrder()">
-        <div class="demo__icon" id="icon">🛒</div>
-        <div class="demo__text" id="text">Place Order</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__brand">Pizza Palace</div>
+        <ul class="navbar__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <header class="welcome-section" id="home">
+        <h1>Welcome to Pizza Palace</h1>
+        <p>Your favorite pizza, delivered hot and fresh!</p>
+    </header>
+
+    <!-- Featured Pizzas Section -->
+    <section class="featured-pizzas" id="menu">
+        <h2>Our Popular Pizzas</h2>
+        <div class="pizza-cards">
+            <div class="card">
+                <img src="Pizza/margherita.png" alt="Margherita Pizza">
+                <h3>Margherita</h3>
+                <p>A classic pizza with tomato, mozzarella, and fresh basil.</p>
+            </div>
+            <div class="card">
+                <img src="Pizza/Pepperoni.png" alt="Pepperoni Pizza">
+                <h3>Pepperoni</h3>
+                <p>Loaded with pepperoni and mozzarella cheese.</p>
+            </div>
+            <div class="card">
+                <img src="Pizza/Veggie.png" alt="Veggie Pizza">
+                <h3>Veggie Delight</h3>
+                <p>A healthy choice with bell peppers, olives, and mushrooms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Button -->
+    <div class="order-section">
+        <div class="demo" id="orderButton" onclick="handleOrder()">
+            <div class="demo__icon" id="icon">🍕</div>
+            <div class="demo__text" id="text">Order Pizza</div>
+        </div>
+        <p class="order-note" id="orderNote">Your delicious pizza is just a click away!</p>
     </div>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer__content">
+        <div class="footer__column">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#work-with-us">Work With Us</a></li>
+                <li><a href="#about">About Pizza Palace</a></li>
+                <li><a href="#contactless">Contactless Restaurant</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3>Offers</h3>
+            <ul>
+                <li><a href="#pizza-buffet">Pizza Buffet</a></li>
+                <li><a href="#thin-crust">Thin Crust Pizzas</a></li>
+                <li><a href="#lunch-deal">Lunch Deal</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="#nutrition">Nutrition & Allergens</a></li>
+                <li><a href="#feedback">Give Us Feedback</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3>Policies</h3>
+            <ul>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#cookie-policy">Cookie Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer__column footer__social">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="#download-app">Download Our App</a>
+            <a href="#order-pizza">Order Pizza</a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© 2024 Pizza Palace. All rights reserved.</p>
+        <div class="footer__cookies">
+            <span>Your cookie choice: Allow all</span>
+            <button onclick="changeCookieSettings()">Change Settings</button>
+        </div>
+    </div>
+</footer>
+
 
     <script src="script.js"></script>
 </body>
