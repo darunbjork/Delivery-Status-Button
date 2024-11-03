@@ -1,0 +1,47 @@
+/* Base styling for the button */
+.demo {
+  position: relative;
+  width: 300px;
+  height: 64px;
+  padding-left: 70px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: #00fffc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 1s;
+}
+
+.demo__icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.demo__text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.demo.processing {
+  background: #ffc107;
+}
+
+.demo.delivering {
+  background: #28a745;
+}
+
+/* Animation for dots (used in Delivering state) */
+@keyframes dotAnimation {
+  0%, 20%, 50%, 80%, 100% { opacity: 1; }
+  30%, 60%, 90% { opacity: 0; }
+}
+
+/* Additional styling for final message */
+.demo__text--dots {
+  animation: dotAnimation 1s infinite;
+}
