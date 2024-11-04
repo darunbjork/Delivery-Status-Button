@@ -7,15 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="navbar__brand">Pizza Palace</div>
+        <div class="navbar__brand">
+          <h1>Pizza Palace 🍕</h1>
+        </div>
         <ul class="navbar__links">
-            <li><a href="#home">Home</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#beetlejuice">Beetlejuice</a></li>
+            <li><a href="#friday-buffet">Friday Buffet</a></li>
+            <li><a href="#lunch-buffet">Lunch Buffet</a></li>
+            <li><a href="#restaurants">Restaurants</a></li>
+            <li><a href="#card" class="navbar__order">Order</a></li>
         </ul>
+        <div class="navbar__dropdown">
+            <button onclick="toggleDropdown()" class="navbar__dropdown-btn">More</button>
+            <div id="dropdownMenu" class="navbar__dropdown-content">
+                <a href="#digital-order">Order Online</a>
+                <a href="#visit-restaurant">Visit Restaurant</a>
+                <a href="#home-delivery">Home Delivery</a>
+                <a href="#takeaway">Takeaway</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Welcome Section -->
@@ -38,6 +52,16 @@
                 </div>
                 <p class="order-note" id="orderNoteMargherita">Your delicious pizza is just a click away!</p>
             </div>
+                <div class="card">
+                    <img src="Pizza/2024-11-04 at 00.07.35.png" alt="Greek Pizza">
+                    <h3>Greek pizza</h3>
+                    <p>Is a style of pizza crust and preparation where the pizza is proofed and cooked in a metal pan.</p>
+                    <div class="order-button" id="orderButtonGreekPizza" onclick="handleOrder('GreekPizza')">
+                        <span id="iconGreekPizza">🍕</span>
+                        <span id="textGreekPizza">Order Now</span>
+                    </div>
+                    <p class="order-note" id="orderNoteGreekPizza">Your delicious pizza is just a click away!</p>
+                </div>
             <div class="card">
                 <img src="Pizza/Pepperoni.png" alt="Pepperoni Pizza">
                 <h3>Pepperoni</h3>
@@ -111,7 +135,6 @@
         </div>
     </div>
 </footer>
-<button id="scroll-to-top">Top</button>
     <script src="script.js"></script>
 </body>
 </html>

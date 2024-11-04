@@ -1,7 +1,8 @@
 let orderStages = {
     Margherita: 0,
     Pepperoni: 0,
-    Veggie: 0
+    Veggie: 0,
+    GreekPizza: 0,
 };
 
 function handleOrder(pizzaType) {
@@ -49,6 +50,24 @@ function handleOrder(pizzaType) {
             orderNote.textContent = "Your delicious pizza is just a click away!";
             orderStages[pizzaType] = 0;
             break;
+    }
+}
+
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.navbar__dropdown-btn')) {
+        const dropdowns = document.getElementsByClassName("navbar__dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
     }
 }
 
